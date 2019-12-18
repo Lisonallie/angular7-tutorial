@@ -3,7 +3,7 @@
 <div *ngFor="let product of products; index as productId"> <!-- loops through each product. Below code is for 1 instance and it repeats due to the loop. ;;; index as productId narrows down the path further -->
 
 	<h3>
-		<a [title]="product.name + ' details'">
+		<a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
 			{{ product.name }}
 		</a>
 	</h3>
