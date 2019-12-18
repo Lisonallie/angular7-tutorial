@@ -8,10 +8,14 @@ import { CartService } from '../cart.service';
   styleUrls: ['./shipping.component.css']
 })
 export class ShippingComponent implements OnInit {
+  shippingCosts; // here is where you define the property, give it a value elsewhere
 
-  constructor() { }
+  constructor(
+    private CartService: CartService
+  ) { }
 
   ngOnInit() {
+    this.shippingCosts = this.cartService.getShippingPrices();
   }
 
 }
