@@ -11,7 +11,7 @@ export class ShippingComponent implements OnInit {
   shippingCosts; // here is where you define the property, give it a value elsewhere
 
   constructor(
-    private CartService: CartService
+    private cartService: CartService
   ) { }
 
   ngOnInit() {
